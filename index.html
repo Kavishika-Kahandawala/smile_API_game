@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/game.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAXTowAB0g4ABJNjQA//3+ACgg6ABcPDMAJyHdACAf4wAtIOgAIh/jAP78+QAlG+YAIR7mAPz3/wBLNS8AWzoxAP/+/AAmI9gASjQqACce3gApItsAJCDhAFg4LwDo6f8ASjErAFw6MgBeOjIA+vb7ACYd4gAnHeIAJSDiACcc5QBbODAAXDgwAP3+/gD+/v4A9PX/AP/+/gAjHtgATzQsAP/8/ABZOzEA///8APv+/wBeOzEA/v7/AP/+/wCDf+UAIx3LAGA6LAAjHN8AKyLWAP7//QBYVckAXzsyAP76+wAkHeUAWDkwACke4gC3tvcAJx3lAPv//gD//P4A/f/+AP7//gD///4A9Pb/AGE8MAAqJNoA+Pb/ACUe4wAkHeYAXjouAP/9/ABcOTEAXTkxAFo8MQBeOTEA/P//AO7k4AD9//8A/v//AP///wDExPoAhHJvACkf4QBeNy8AWTkyAFo5MgBcOTIAxML4ACge3ABgPDIAKyHcACgg3wC3uPQAVjYzAF03MADy8f8AKBzaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACsvPkFTUkpQQFJPT1JTUlNWCgxIHwkzKE0bIiFMBlcDO2QlXBQsIBw3Fz8EBC9iSTkdY1RbMB42GhALMhkpAUxfDSdgDgUCFlUtOEQTDzpOMT0IRjxHR0cYXSQmJBFMSz8VXhJFBwcHNGEqKipYWVouNS9BL0JCQkMjLy8vUVNTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA//8AAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA//8AAP//AAA=" rel="icon" type="image/x-icon" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+    crossorigin="anonymous"></script>
+
+
+  <script src="assets/js/smile_game.js"></script>
+  <!-- <script src="assets/js/sdsd.js"></script> -->
+
+  <style>
+    body {
+      background-image: url("images/signin_bacground.jpg");
+    }
+  </style>
+
+
+  <title>Game</title>
+</head>
+
+<body onload="load_smile()">
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            About
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+
+      </ul>
+      </ul>
+
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+
+  <div class="container bg-dark">
+    <div class="game_area">
+      <h1 class="text-center">Project Game</h1>
+      <div class="col text-center">
+        <button class="btn btn-default bg-dark" onclick="load_smile()">Test Reload</button>
+        <br>
+
+
+
+        <!-- <p id="demo">Fetch a file to change this text.</p> -->
+        <form name="smile_form" id="contactform"></form>
+        <br>
+
+        <!-- Pause row -->
+        <div class="row">
+          <div class="col-md-4">
+
+          </div>
+          <div class="col-md-4 offset-md-4">
+            <button class="btn btn-default bg-dark" data-toggle="modal" data-target="#pausemenu">| |</button>
+            <button class="btn btn-default bg-dark" onclick="alert_x()">t</button>
+            
+          </div>
+        </div>
+
+        <div class="col-auto text-center">
+          <img class="smile_q" id="smile_q" src="images/sample.png" alt="Smile API question" height="250vh"
+            width="500vw" />
+            <p id="ttt"></div>
+        </div>
+
+        
+
+        <!-- <div class="col-auto text-center">
+          <a href="">
+            <img class="answer_cards" id="answer_cards" src="images/sample.png" alt="Answer 0" onclick="getuser_answer('0')"/>
+          </a>
+          <a href="">
+            <img class="answer_cards" id="answer_cards" src="images/sample.png" alt="Answer 1" onclick="getuser_answer('1')"/>
+          </a>
+          <a href="">
+            <img class="answer_cards" id="answer_cards" src="images/sample.png" alt="Answer 2" onclick="getuser_answer('2')"/>
+          </a>
+          <a href="">
+            <img class="answer_cards" id="answer_cards" src="images/sample.png" alt="Answer 3" onclick="getuser_answer('3')"/>
+          </a>
+          <a href="">
+            <img class="answer_cards" id="answer_cards" src="images/sample.png" alt="Answer 4" onclick="getuser_answer('4')"/>
+          </a>
+          <a href="/" class="bn13">Button</a>
+          <a href="/" class="bn1">Button</a>
+        </div>
+        <br>
+        <div class="col-auto text-center">
+          <a href="#">
+            <img class="answer_cards" id="answer_cards" src="images/sample.png" alt="Answer 5" onclick="getuser_answer('5')"/>
+          </a>
+          <a href="">
+            <img class="answer_cards" id="answer_cards" src="images/sample.png" alt="Answer 6" onclick="getuser_answer('6')"/>
+          </a>
+          <a href="">
+            <img class="answer_cards" id="answer_cards" src="images/sample.png" alt="Answer 7" onclick="getuser_answer('7')"/>
+          </a>
+          <a href="">
+            <img class="answer_cards" id="answer_cards" src="images/sample.png" alt="Answer 8" onclick="getuser_answer('8')"/>
+          </a>
+          <a href="">
+            <img class="answer_cards" id="answer_cards" src="images/sample.png" alt="Answer 9" onclick="getuser_answer('9')"/>
+          </a>
+        </div> -->
+
+
+        <!-- 1st answer line -->
+        <div class="row justify-content-center ">
+        <nav role="navigation" class="hi">
+          <ul>
+            <li class="li_ans">
+              <a href="javascript:;" onclick="getuser_answer(0)">
+                <span class="inner"></span>
+                <span class="answer_num">0</span>
+              </a>
+            </li>
+            <li class="li_ans">
+              <a href="javascript:;" onclick="getuser_answer(1)">
+                <span class="inner"></span>
+                <span class="answer_num">1</span>
+              </a>
+            </li>
+            <li class="li_ans">
+              <a href="javascript:;" onclick="getuser_answer(2)">
+                <span class="inner"></span>
+                <span class="answer_num">2</span>
+              </a>
+            </li>
+            <li class="li_ans">
+              <a href="javascript:;" onclick="getuser_answer(3)">
+                <span class="inner"></span>
+                <span class="answer_num">3</span>
+              </a>
+            </li>
+            <li class="li_ans">
+              <a href="javascript:;" onclick="getuser_answer(4)">
+                <span class="inner"></span>
+                <span class="answer_num">4</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- 2nd answer line -->
+        <div class="row justify-content-center ">
+        <nav role="navigation" class="hi">
+          <ul>
+            <li class="li_ans">
+              <a href="javascript:;" onclick="getuser_answer(5)">
+                <span class="inner"></span>
+                <span class="answer_num">5</span>
+              </a>
+            </li>
+            <li class="li_ans">
+              <a href="javascript:;" onclick="getuser_answer(6)">
+                <span class="inner"></span>
+                <span class="answer_num">6</span>
+              </a>
+            </li>
+            <li class="li_ans">
+              <a href="javascript:;" onclick="getuser_answer(7)">
+                <span class="inner"></span>
+                <span class="answer_num">7</span>
+              </a>
+            </li>
+            <li class="li_ans">
+              <a href="javascript:;" onclick="getuser_answer(8)">
+                <span class="inner"></span>
+                <span class="answer_num">8</span>
+              </a>
+            </li>
+            <li class="li_ans">
+              <a href="javascript:;" onclick="getuser_answer(9)">
+                <span class="inner"></span>
+                <span class="answer_num">9</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+        <div class="result" id="result"></div>
+
+      </div>
+
+      <div class="modal fade" id="pausemenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pause Menu</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form name="contactform" id="pausemenu" enctype="text/plain"
+        action="google.com"
+        target="hidden_iframe" onsubmit=" submitted=true;">
+                <div class="form-group">
+                  
+                  <button type="button" class="btn btn-default bg-dark" value="Submit" >Play</button>
+                </div>
+                <div class="form-group">
+                  
+                  <button type="button" class="btn btn-default bg-dark" value="Submit" >Main menu</button>
+                </div>
+                <div class="form-group">
+                  
+                  <button type="button" class="btn btn-default bg-dark" value="Submit" >Leaderboard</button>
+                </div>
+              </form>
+              <!-- <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe> -->
+            </div>
+            <!-- <div class="modal-footer"> -->
+              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <input type="submit" value="Send Message" class="primary" /> -->
+              <!-- <button type="button" class="btn btn-primary" type="submit" value="Submit" >Send message</button> -->
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <div class="circle"></div> -->
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+
+
+</body>
+
+</html>

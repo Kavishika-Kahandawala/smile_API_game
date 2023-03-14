@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Fetch API</h1>
+<h2>The fetch() Method</h2>
+<p id="demo">Fetch a file to change this text.</p>
+<p id="question">Question here</p>
+<p id="solution">Solution here</p>
+
+<script>
+getText("https://marcconrad.com/uob/smile/api.php?out=json");
+
+async function getText(file) {
+  let x = await fetch(file);
+  let y = await x.text();
+  
+  
+  var obj = JSON.parse(y);
+  let quest = obj.question;
+  let sol  =obj.solution;
+  //alert(obj.question);
+  
+  
+  document.getElementById("demo").innerHTML = y;
+  document.getElementById("question").innerHTML = quest;
+  document.getElementById("solution").innerHTML = sol;
+  
+  
+  
+}
+</script>
+
+</body>
+</html>

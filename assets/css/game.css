@@ -1,0 +1,133 @@
+.bn13 {
+    display: inline-block;
+    padding: 0.65em 1.6em;
+    border: 3px solid #ffffff;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+    animation: bn13bouncy 5s infinite linear;
+    position: relative;
+  }
+  
+  .bn13:hover {
+    background-color: white;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  @keyframes bn13bouncy {
+    0% {
+      top: 0em;
+    }
+    40% {
+      top: 0em;
+    }
+    43% {
+      top: -0.9em;
+    }
+    46% {
+      top: 0em;
+    }
+    48% {
+      top: -0.4em;
+    }
+    50% {
+      top: 0em;
+    }
+    100% {
+      top: 0em;
+    }
+  }
+
+
+  .bn1 {
+    display: inline-block;
+    padding: 0.6em 1.7em;
+    border: 0.1em solid #ffffff;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  
+  .bn1:hover {
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: none;
+  }
+
+  /* Answer circles */
+  
+.hi  {
+  padding: 10px;
+}
+
+.li_ans  {
+  float: left;
+  font-size: 2em;
+  margin-right: 40px;
+  line-height: 80px;
+  position: relative;
+  text-align: center;
+  list-style-type: none;
+}
+.li_ans a {
+  background-color: #fff;
+  color: #20826c;
+  display: block;
+  height: 80px;
+  position: relative;
+  text-decoration: none;
+  width: 80px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: color 0.1s;
+  -o-transition: color 0.1s;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+}
+.li_ans a span {
+  position: relative;
+  z-index: 1;
+}
+.li_ans a .inner {
+  background-color: #20826c;
+  display: block;
+  height: 0;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.3s;
+}
+.li_ans a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.li_ans a:hover .inner {
+  height: 76px;
+  margin-left: -38px;
+  margin-top: -38px;
+  width: 76px;
+}
+
