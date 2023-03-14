@@ -30,32 +30,6 @@ function load_smile() {
 
     }
 }
-// async function getText(data) {
-//     var x = await fetch("https://marcconrad.com/uob/smile/api.php?out=json");
-//     var y = await x.text();
-
-
-//     var obj = JSON.parse(y);
-
-//     var smile_question = obj.question;
-//     var smile_solution = obj.solution;
-//     // alert(obj.question);
-//     // alert(smile_question)
-
-
-//     // document.getElementById("demo").innerHTML = y;
-//     document.getElementById("smile_q").src = smile_question;
-//     // document.getElementById("demo").innerHTML = y;
-//     smile_q(smile_question)
-
-
-
-// }
-
-// var tsde=getText();
-
-// done
-// console.log(tsde)
 
 function set_smile_q(data) {
     final_question = data;
@@ -66,6 +40,13 @@ function set_smile_a(data) {
 function alert_x() {
     alert(final_solution)
 }
+
+// Manipulate dom with js
+function game_area_change(){
+    
+    // document.getElementById("game_area").innerHTML = "<img class='smile_q' id='smile_q' src='images/sample.png'>";
+}
+
 
 
 // var ssdsd=getText()
@@ -142,7 +123,7 @@ function enemylose(){
 
 }
 function force_user_health(){
-    
+
 }
 function force_enemy_health(){
 
@@ -155,5 +136,20 @@ function reduce_enemy_health(){
 }
 function set_level(level){
     // set by inner html id
+
+}
+function next_enemy(){
+
+}
+function pausemenu(){
+
+}
+
+// Extra (experimental)
+function calc_atks(){
+
+}
+
+function calc_teamhealth(){
 
 }
