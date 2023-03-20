@@ -1,6 +1,9 @@
 var final_question = "API not loaded";
 var final_solution = 0;
 
+// Execute
+load_game();
+
 
 function load_smile() {
     // document.getElementsByTagName("body")[0].style.cursor = "url('../game files/cursor/cursor_1.png'), auto";
@@ -33,6 +36,7 @@ function load_smile() {
     }
 }
 
+
 function set_smile_q(data) {
     final_question = data;
 }
@@ -50,12 +54,12 @@ function game_area_change() {
 }
 
 function load_game(){
-    var tttt=document.getElementById('pause_menu')
-    hide_div(tttt);
-//     show_div('pause_menu');
-//     show_div('game_area');
+    let pause_div=document.getElementById("pause_menu")
+    let game_div=document.getElementById("game_area")
+    hide_div(pause_div)
+    hide_div(game_div)
 }
-load_game();
+
 
 // section hide toggle
 function hide_div(id) {
