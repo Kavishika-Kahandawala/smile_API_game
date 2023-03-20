@@ -69,7 +69,7 @@
 
   /* Answer circles */
   
-.hi  {
+.answer_nav  {
   padding: 10px;
 }
 
@@ -82,7 +82,7 @@
   text-align: center;
   list-style-type: none;
 }
-.li_ans a {
+.li_ans .answer_a {
   background-color: #fff;
   color: #20826c;
   display: block;
@@ -98,11 +98,11 @@
   -webkit-transition: color 0.1s;
   transition: color 0.1s;
 }
-.li_ans a span {
+.li_ans .answer_a .answer_num {
   position: relative;
   z-index: 1;
 }
-.li_ans a .inner {
+.li_ans .answer_a .inner {
   background-color: #20826c;
   display: block;
   height: 0;
@@ -119,15 +119,75 @@
   -webkit-transition: all 0.1s;
   transition: all 0.3s;
 }
-.li_ans a:hover {
+.li_ans .answer_a:hover {
   color: #fff;
   text-decoration: none;
 }
 
-.li_ans a:hover .inner {
+.li_ans .answer_a:hover .inner {
   height: 76px;
   margin-left: -38px;
   margin-top: -38px;
   width: 76px;
 }
 
+/* Pause Menu */
+#pause_wrapper, #pause_wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pause_a , .mode_h_a{
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+.pause_a .pause_span , .mode_h_a .mode_h_span{
+  position: relative;
+  z-index: 2;
+}
+
+.pause_a:after, .mode_h_a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff003b;
+  transition: all .35s;
+}
+
+.pause_a:hover, .mode_h_a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
+.pause_a:hover:after, .mode_h_a:hover:after{
+  width: 100%;
+}
+
+.pause_col,.mode_h_col{
+  padding: 10px;
+}
+
+/* align level, mode, count */
+.level_num , .divider_1 ,.mode_name,.mode_text, .countdown_num{
+  padding: 0px 10px;
+}
+
+
+  

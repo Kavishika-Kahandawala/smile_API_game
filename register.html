@@ -85,10 +85,15 @@
         <br><br><br><br>
 
         
-          <form name="reg_form" id="reg_form" style="padding-bottom: 50px;">
+          <form name="reg_form" id="reg_form" style="padding-bottom: 50px;" onsubmit="signup(event)">
 
             <div class="fields">
               <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" name="email" id="email"
+                    placeholder="Enter your E-mail" />
+                </div>
                 <div class="form-group col-md-12">
                   <label for="username">Username</label>
                   <input type="text" class="form-control" name="username" id="username"
@@ -106,8 +111,11 @@
                 </div>
               </div>
             </div>
+            <div id="button_container">
+              <button id="signup" class="signup">Register</button>
+            </div>
 
-            <input type="submit" value="Sign-in" class="primary" />
+            <!-- <input type="submit" value="Sign-in" class="primary" /> -->
             &nbsp;
           </form>
         
@@ -128,7 +136,12 @@
 
 
 
+
+
   <!-- Scripts -->
+ <script src="assets/js/console.js" type="module"></script>
+
+
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery.scrolly.min.js"></script>
   <script src="assets/js/jquery.scrollex.min.js"></script>

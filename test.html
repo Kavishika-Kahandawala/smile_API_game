@@ -1,34 +1,16 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>JavaScript Fetch API</h1>
-<h2>The fetch() Method</h2>
-<p id="demo">Fetch a file to change this text.</p>
-<p id="question">Question here</p>
-<p id="solution">Solution here</p>
+<form onsubmit="signup(event)">
+  <label for="email">Email</label>
+  <input type="text" id="email" name="email">
+  <label for="password">password</label>
+  <input type="password" id="password" name="password">
+  <button id="signup" class="signup">Register</button>
+</form>
+<button id="ss" class="ss" onclick=fire()>test</button>
 
-<script>
-getText("https://marcconrad.com/uob/smile/api.php?out=json");
-
-async function getText(file) {
-  let x = await fetch(file);
-  let y = await x.text();
-  
-  
-  var obj = JSON.parse(y);
-  let quest = obj.question;
-  let sol  =obj.solution;
-  //alert(obj.question);
-  
-  
-  document.getElementById("demo").innerHTML = y;
-  document.getElementById("question").innerHTML = quest;
-  document.getElementById("solution").innerHTML = sol;
-  
-  
-  
-}
-</script>
+<script src="assets/js/test.js" type="module"></script>
 
 </body>
 </html>
