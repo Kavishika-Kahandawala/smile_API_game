@@ -24,9 +24,9 @@ a:link {
  
   
   /* cursor */
-  /* .game_area, a, button {
-    cursor: url("../game files/cursor/test.png"), auto;
-  } */
+  .game_area, a, button {
+    cursor: url("../game files/cursor/cursor.png"), auto;
+  }
 
   .circle {
     background: lightblue;
