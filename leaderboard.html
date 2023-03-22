@@ -39,7 +39,7 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Smile Game</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -48,25 +48,30 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html">Play <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="signin.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">Sign-up</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
             About
           </a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Tutorial </a>
+            <a class="dropdown-item" href="#">help</a>
+            <a class="dropdown-item" href="#">contact</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">About Developer</a>
           </div>
         </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="#">Link</a>
-        </li>
+
 
       </ul>
       </ul>
@@ -84,12 +89,28 @@
         <span class="h1 fw-bold mb-0">Leaderboard</span>
         <br><br><br><br>
 
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Mode
+          </a>
         
-        <table class="table">
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Beginner</a>
+            <a class="dropdown-item" href="#">Easy</a>
+            <a class="dropdown-item" href="#">Medium</a>
+            <a class="dropdown-item" href="#">Hard</a>
+            <a class="dropdown-item" href="#">Veteran</a>
+          </div>
+        </div>
+        <br>
+
+        
+        <table class="table table-hover">
           <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Username</th>
+              <th scope="col">Time/Country</th>
               <th scope="col">Score</th>
             </tr>
           </thead>
@@ -97,17 +118,20 @@
             <tr>
               <th scope="row">1</th>
               <td>Mark</td>
-              <td>3,454,454</td>
+              <td>Otto</td>
+              <td>5656</td>
             </tr>
             <tr>
               <th scope="row">2</th>
               <td>Jacob</td>
-              <td>520,565</td>
+              <td>Thornton</td>
+              <td>3545</td>
             </tr>
             <tr>
               <th scope="row">3</th>
-              <td>Larry</td>
-              <td>123,121</td>
+              <td >Larry</td>
+              <td >Bird</td>
+              <td>356</td>
             </tr>
           </tbody>
         </table>

@@ -9,8 +9,9 @@
   <link rel="stylesheet" type="text/css" href="assets/css/game.css">
 
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css"
+    integrity="sha512-+ouAqATs1y4kpPMCHfKHVJwf308zo+tC9dlEYK9rKe7kiP35NiP+Oi35rCFnc16zdvk9aBkDUtEO3tIPl0xN5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link
     href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAXTowAB0g4ABJNjQA//3+ACgg6ABcPDMAJyHdACAf4wAtIOgAIh/jAP78+QAlG+YAIR7mAPz3/wBLNS8AWzoxAP/+/AAmI9gASjQqACce3gApItsAJCDhAFg4LwDo6f8ASjErAFw6MgBeOjIA+vb7ACYd4gAnHeIAJSDiACcc5QBbODAAXDgwAP3+/gD+/v4A9PX/AP/+/gAjHtgATzQsAP/8/ABZOzEA///8APv+/wBeOzEA/v7/AP/+/wCDf+UAIx3LAGA6LAAjHN8AKyLWAP7//QBYVckAXzsyAP76+wAkHeUAWDkwACke4gC3tvcAJx3lAPv//gD//P4A/f/+AP7//gD///4A9Pb/AGE8MAAqJNoA+Pb/ACUe4wAkHeYAXjouAP/9/ABcOTEAXTkxAFo8MQBeOTEA/P//AO7k4AD9//8A/v//AP///wDExPoAhHJvACkf4QBeNy8AWTkyAFo5MgBcOTIAxML4ACge3ABgPDIAKyHcACgg3wC3uPQAVjYzAF03MADy8f8AKBzaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACsvPkFTUkpQQFJPT1JTUlNWCgxIHwkzKE0bIiFMBlcDO2QlXBQsIBw3Fz8EBC9iSTkdY1RbMB42GhALMhkpAUxfDSdgDgUCFlUtOEQTDzpOMT0IRjxHR0cYXSQmJBFMSz8VXhJFBwcHNGEqKipYWVouNS9BL0JCQkMjLy8vUVNTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA//8AAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA//8AAP//AAA="
     rel="icon" type="image/x-icon" />
@@ -28,7 +29,7 @@
     crossorigin="anonymous"></script>
 
 
-  
+
 
   <style>
     body {
@@ -46,7 +47,7 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Smile Game</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -55,25 +56,30 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html">Play <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="signin.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">Sign-up</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
             About
           </a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Tutorial </a>
+            <a class="dropdown-item" href="#">help</a>
+            <a class="dropdown-item" href="#">contact</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">About Developer</a>
           </div>
         </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="#">Link</a>
-        </li>
+
 
       </ul>
       </ul>
@@ -130,7 +136,7 @@
     <!-- Mode end -->
 
     <!-- Pause -->
-    <div class="pause_menu min-vh-100 align-middle" id="pause_menu" style="display: block;">
+    <div class="pause_menu min-vh-100 align-middle" id="pause_menu">
 
       <div class="pause_header text-center"> Game Paused </div>
 
@@ -159,14 +165,28 @@
     <!-- Pause end -->
 
 
+    <!-- Result -->
+    <div class="result_area min-vh-100 align-middle" id="result_area">
+      <div class="col-auto text-center">
+        <div class="pad" style="padding-top: 100px;"></div>
+        <img class="result_img" id="result_img" src="#" alt="result_img" height="250vh" width="500vw" />
+      </div>
+      <div class="pause_col col d-flex justify-content-center">
+        <div class="pause_wrapper">
+          <a class="pause_a" href="#"><span class="result_span" id="result_span">Proceed to stage</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- Result end -->
 
-    <div class="game_area" id="game_area" >
+
+
+
+    <div class="game_area" id="game_area">
       <div class="col text-center">
-        <button class="btn btn-default bg-dark" onclick="load_smile()">Test Reload</button>
-        <br>
         <br>
 
-        <!-- Pause row -->
+        <!-- upper row -->
         <div class="row">
           <div class="d-flex flex-grow-1">
             <span class="level_text" id="level_text">Level:</span>
@@ -174,6 +194,9 @@
             <span class="divider_1"> | </span>
             <span class="mode_text" id="mode_text">Mode:</span>
             <span class="mode_name" id="mode_name">-mode-</span>
+            <span class="divider_1"> | </span>
+            <span class="mode_text" id="score_name">Score:</span>
+            <span class="mode_name" id="score_num">0</span>
 
           </div>
         </div>
@@ -288,9 +311,112 @@
 
       </div> -->
 
-      <div class="health_user">
-         
+      <!-- Player area -->
+      <div class="row">
+        <div class="col-md-6">
+
+          <div class="row">
+            <!-- Player Icon -->
+            <div class="col text-center" style="padding: 50px 0px 20px;"><img class="user_logo text text-center"
+                id="user_logo" alt="user_logo" src="images/user_logo.png" style="height: 20vh; width: 20vw;"></div>
+
+          </div>
+          <!-- Health bar palyer -->
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <table class="table table-bordered border border-dark">
+                <tbody>
+                  <tr id="user_health_bar">
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+          <div class="row">
+            <table class="user_charct table table-borderless table-dark">
+              <tr>
+                <td></td>
+                <td><a href="/buttons/42" class="btn41-43 btn-42">
+                    <i class="fa-solid fa-robot"></i>
+                  </a>
+                </td>
+                <td><a href="/buttons/42" class="btn41-43 btn-42">
+                    <i class="fa-solid fa-skull"></i>
+                  </a>
+                </td>
+                <td><a href="/buttons/42" class="btn41-43 btn-42">
+                    <i class="fa-solid fa-ghost"></i>
+                  </a>
+                </td>
+                <td><a href="/buttons/42" class="btn41-43 btn-42">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                  </a>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <span class="cd_char_1" id="cd_char_1">0</span>
+                  <span>/</span>
+                  <span class="av_char_1" id="av_char_1">2</span>
+                </td>
+                <td>
+                  <span class="cd_char_2" id="cd_char_2">0</span>
+                  <span>/</span>
+                  <span class="av_char_2" id="av_char_2">4</span>
+                </td>
+                <td>
+                  <span class="cd_char_3" id="cd_char_3">0</span>
+                  <span>/</span>
+                  <span class="av_char_3" id="av_char_3">3</span>
+                </td>
+                <td>
+                  <span class="cd_char_4" id="cd_char_4">0</span>
+                  <span>/</span>
+                  <span class="av_char_4" id="av_char_4">5</span>
+                </td>
+                <td></td>
+              </tr>
+            </table>
+
+          </div>
+          <span id="ans"></span> <!-- Remove this-->
+
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <!-- Enemy Icon -->
+            <div class="col text-center" style="padding: 50px 0px 20px;"><img class="enemy_logo text text-center"
+                id="enemy_logo" alt="user_logo" src="images/enemy_image.png" style="height: 20vh; width: 20vw;"></div>
+
+          </div>
+          <!-- Health bar enemy-->
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <table class="table table-bordered border border-dark">
+                <tbody>
+                  <tr id="enemy_health_bar">
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-2"></div>
+
+          </div>
+
+
+          
+          
+
+
+        </div>
       </div>
+
 
 
 
