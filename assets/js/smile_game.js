@@ -76,7 +76,6 @@ let result_area = document.getElementById("result_area")
 hide_div(result_area)
 }
 
-
 // section hide toggle
 function hide_div(id) {
     id.style.display = "none";
