@@ -1,124 +1,130 @@
 .bn13 {
-    display: inline-block;
-    padding: 0.65em 1.6em;
-    border: 3px solid #ffffff;
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 0.12em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    color: #ffffff;
-    text-align: center;
-    transition: all 0.2s;
-    animation: bn13bouncy 5s infinite linear;
-    position: relative;
-  }
-  
-  .bn13:hover {
-    background-color: white;
-    color: #000000;
-    text-decoration: none;
-  }
-  
-  @keyframes bn13bouncy {
-    0% {
-      top: 0em;
-    }
-    40% {
-      top: 0em;
-    }
-    43% {
-      top: -0.9em;
-    }
-    46% {
-      top: 0em;
-    }
-    48% {
-      top: -0.4em;
-    }
-    50% {
-      top: 0em;
-    }
-    100% {
-      top: 0em;
-    }
+  display: inline-block;
+  padding: 0.65em 1.6em;
+  border: 3px solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+  animation: bn13bouncy 5s infinite linear;
+  position: relative;
+}
+
+.bn13:hover {
+  background-color: white;
+  color: #000000;
+  text-decoration: none;
+}
+
+@keyframes bn13bouncy {
+  0% {
+    top: 0em;
   }
 
-
-  .bn1 {
-    display: inline-block;
-    padding: 0.6em 1.7em;
-    border: 0.1em solid #ffffff;
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 0.12em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    color: #ffffff;
-    text-align: center;
-    transition: all 0.2s;
-  }
-  
-  .bn1:hover {
-    color: #000000;
-    background-color: #ffffff;
-    text-decoration: none;
+  40% {
+    top: 0em;
   }
 
-
-  .btn41-43 {
-    padding: 10px 25px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    background: transparent;
-    outline: none !important;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-  }
-  
-  .btn-42 {
-    border: 2px solid rgb(255, 255, 255);
-    z-index: 1;
-    color: white;
-  }
-  
-  .btn-42:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    background: rgb(255, 255, 255);
-    transition: all 0.3s ease;
-  }
-  
-  .btn-42:hover {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-  }
-  
-  .btn-42:hover:after {
-    top: 0;
-    height: 100%;
-  }
-  
-  .btn-42:active {
-    top: 2px;
+  43% {
+    top: -0.9em;
   }
 
-  /* Answer circles */
-  
-.answer_nav  {
+  46% {
+    top: 0em;
+  }
+
+  48% {
+    top: -0.4em;
+  }
+
+  50% {
+    top: 0em;
+  }
+
+  100% {
+    top: 0em;
+  }
+}
+
+
+.bn1 {
+  display: inline-block;
+  padding: 0.6em 1.7em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.bn1:hover {
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+
+.btn41-43 {
+  padding: 10px 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-42 {
+  border: 2px solid rgb(255, 255, 255);
+  z-index: 1;
+  color: white;
+}
+
+.btn-42:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+}
+
+.btn-42:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.btn-42:hover:after {
+  top: 0;
+  height: 100%;
+}
+
+.btn-42:active {
+  top: 2px;
+}
+
+/* Answer circles */
+
+.answer_nav {
   padding: 10px;
 }
 
-.li_ans  {
+.li_ans {
   float: left;
   font-size: 2em;
   margin-right: 40px;
@@ -127,6 +133,7 @@
   text-align: center;
   list-style-type: none;
 }
+
 .li_ans .answer_a {
   background-color: #fff;
   color: #20826c;
@@ -143,10 +150,12 @@
   -webkit-transition: color 0.1s;
   transition: color 0.1s;
 }
+
 .li_ans .answer_a .answer_num {
   position: relative;
   z-index: 1;
 }
+
 .li_ans .answer_a .inner {
   background-color: #20826c;
   display: block;
@@ -164,6 +173,7 @@
   -webkit-transition: all 0.1s;
   transition: all 0.3s;
 }
+
 .li_ans .answer_a:hover {
   color: #fff;
   text-decoration: none;
@@ -177,14 +187,16 @@
 }
 
 /* Pause Menu */
-#pause_wrapper, #pause_wrapper {
+#pause_wrapper,
+#pause_wrapper {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.pause_a , .mode_h_a{
+.pause_a,
+.mode_h_a {
   display: block;
   width: 200px;
   height: 40px;
@@ -200,12 +212,15 @@
   transition: all .35s;
 }
 
-.pause_a .pause_span , .mode_h_a .mode_h_span ,.result_span{
+.pause_a .pause_span,
+.mode_h_a .mode_h_span,
+.result_span {
   position: relative;
   z-index: 2;
 }
 
-.pause_a:after, .mode_h_a:after{
+.pause_a:after,
+.mode_h_a:after {
   position: absolute;
   content: "";
   top: 0;
@@ -216,21 +231,28 @@
   transition: all .35s;
 }
 
-.pause_a:hover, .mode_h_a:hover{
+.pause_a:hover,
+.mode_h_a:hover {
   color: #fff;
   text-decoration: none;
 }
 
-.pause_a:hover:after, .mode_h_a:hover:after{
+.pause_a:hover:after,
+.mode_h_a:hover:after {
   width: 100%;
 }
 
-.pause_col,.mode_h_col{
+.pause_col,
+.mode_h_col {
   padding: 10px;
 }
 
 /* align level, mode, count */
-.level_num , .divider_1 ,.mode_name,.mode_text, .countdown_num{
+.level_num,
+.divider_1,
+.mode_name,
+.mode_text,
+.countdown_num {
   padding: 0px 10px;
 }
 
@@ -242,20 +264,29 @@
   /* position: absolute; */
 }
 
-.health_have{
+.health_have {
   background-color: #ffffff;
 }
-.health_lost{
+
+.health_lost {
   background-color: #636363;
 }
-tr{
+
+tr {
   border-color: #000000;
 }
 
-img{
+img {
   object-fit: cover;
 }
 
 .user_charct td {
-  text-align: center;   
+  text-align: center;
+}
+
+/* cursor */
+.game_area,
+a,.btn,
+button,body {
+  cursor: url("../game files/cursor/cursor.png") 15 15, pointer;
 }

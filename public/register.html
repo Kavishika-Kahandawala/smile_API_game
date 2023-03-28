@@ -90,7 +90,8 @@
         <br><br><br><br>
 
 
-        <form name="reg_form" id="reg_form" style="padding-bottom: 50px;" onsubmit="signup(event)">
+        <form name="reg_form" id="reg_form" style="padding-bottom: 50px;" method="post" action="/register">
+          <!--onsubmit="signup(event)" -->
 
           <div class="fields">
             <div class="form-row">
@@ -109,16 +110,17 @@
                   placeholder="Enter your password" />
               </div>
               <div class="form-group col-md-12">
-                <label for="re_password">Re-enter password</label>
-                <input type="password" class="form-control" name="re-password" id="re-password"
-                  placeholder="Enter your password" />
+                <label for="region">Region</label>
+                <div class="form-floating">
+                  <select class="form-select" id="region" name="region">
+                    <option disabled selected> Region </option>
+                    <option value="1">Europe</option>
+                    <option value="2">America</option>
+                    <option value="3">Asia</option>
+                    <option value="4">Africa</option>
+                  </select>
+                </div>
               </div>
-              <div class="form-group col-md-12">
-                <label for="country">Country</label>
-                <input type="text" class="form-control" name="country" id="country"
-                  placeholder="Enter your country" />
-              </div>
-
             </div>
           </div>
           <div id="button_container">
@@ -158,32 +160,31 @@
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
-  
+
   <script>
-    $(document).ready(function(){
-     $.ajaxSetup({ cache: false });
-     $('#country').keyup(function(){
-      $('#result').html('');
-      $('#state').val('');
-      var searchField = $('#country').val();
-      var expression = new RegExp(searchField, "i");
-      $.getJSON('data.json', function(data) {
-       $.each(data, function(key, value){
-        if (value.name.country(expression) != -1 || value.location.country(expression) != -1)
-        {
-         $('#result').append('<li class="list-group-item link-class"> '+value.name+' | <span class="text-muted">'+value.location+'</span></li>');
-        }
-       });   
+    $(document).ready(function () {
+      $.ajaxSetup({ cache: false });
+      $('#country').keyup(function () {
+        $('#result').html('');
+        $('#state').val('');
+        var searchField = $('#country').val();
+        var expression = new RegExp(searchField, "i");
+        $.getJSON('data.json', function (data) {
+          $.each(data, function (key, value) {
+            if (value.name.country(expression) != -1 || value.location.country(expression) != -1) {
+              $('#result').append('<li class="list-group-item link-class"> ' + value.name + ' | <span class="text-muted">' + value.location + '</span></li>');
+            }
+          });
+        });
       });
-     });
-     
-     $('#result').on('click', 'li', function() {
-      var click_text = $(this).text().split('|');
-      $('#country').val($.trim(click_text[0]));
-      $("#result").html('');
-     });
+
+      $('#result').on('click', 'li', function () {
+        var click_text = $(this).text().split('|');
+        $('#country').val($.trim(click_text[0]));
+        $("#result").html('');
+      });
     });
-    </script>
+  </script>
 
 
 </body>
