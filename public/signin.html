@@ -91,20 +91,19 @@
 
         
         
-          <form name="contactform" id="contactform" enctype="text/plain" action="#" target="hidden_iframe"
-            onsubmit="submitted=true;" style="padding-bottom: 50px;">
+          <form name="contactform" id="contactform"  action="users/login" method="post" style="padding-bottom: 50px;">
 
             
             <div class="fields">
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <label for="name">Username</label>
-                  <input type="text" class="form-control" name="entry.811665510" id="name"
+                  <label for="username">Username</label>
+                  <input type="text" class="form-control" name="username" id="username"
                     placeholder="Enter your username" />
                 </div>
                 <div class="form-group col-md-12">
-                  <label for="email">Password</label>
-                  <input type="password" class="form-control" name="entry.909384532" id="email"
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" name="password" id="password"
                     placeholder="Enter your password" />
                 </div>
               </div>

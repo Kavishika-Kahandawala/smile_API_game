@@ -33,7 +33,7 @@
   </style>
 
 
-  <title>register</title>
+  <title>Register</title>
 </head>
 
 <body>
@@ -90,7 +90,7 @@
         <br><br><br><br>
 
 
-        <form name="reg_form" id="reg_form" style="padding-bottom: 50px;" method="post" action="/register">
+        <form name="reg_form" id="reg_form" style="padding-bottom: 50px;" action="users/register">
           <!--onsubmit="signup(event)" -->
 
           <div class="fields">
@@ -161,31 +161,51 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
 
-  <script>
-    $(document).ready(function () {
-      $.ajaxSetup({ cache: false });
-      $('#country').keyup(function () {
-        $('#result').html('');
-        $('#state').val('');
-        var searchField = $('#country').val();
-        var expression = new RegExp(searchField, "i");
-        $.getJSON('data.json', function (data) {
-          $.each(data, function (key, value) {
-            if (value.name.country(expression) != -1 || value.location.country(expression) != -1) {
-              $('#result').append('<li class="list-group-item link-class"> ' + value.name + ' | <span class="text-muted">' + value.location + '</span></li>');
-            }
-          });
-        });
-      });
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous"></script>
 
-      $('#result').on('click', 'li', function () {
-        var click_text = $(this).text().split('|');
-        $('#country').val($.trim(click_text[0]));
-        $("#result").html('');
-      });
+  <script>
+    const form = document.querySelector('form');
+    const emailError = document.querySelector('.email.error');
+    const passwordError = document.querySelector('.password.error');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // reset errors
+      emailError.textContent = '';
+      passwordError.textContent = '';
+
+      // get values
+      const email = form.email.value;
+      const username = form.username.value;
+      const password = form.password.value;
+      const region = form.region.value;
+
+      try {
+        const res = await fetch('users/register', {
+          method: 'POST',
+          body: JSON.stringify({ email, username, password , region}),
+          headers: { 'Content-Type': 'application/json' }
+        });
+        const data = await res.json();
+        console.log(data);
+        if (data.errors) {
+          emailError.textContent = data.errors.email;
+          passwordError.textContent = data.errors.password;
+        }
+        if (data.user) {
+          location.assign('/');
+        }
+
+      }
+      catch (err) {
+        console.log(err);
+      }
+
     });
   </script>
-
 
 </body>
 

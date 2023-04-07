@@ -1,8 +1,7 @@
-const con = require('../db/db-connector')
+const con = require("../db/db-connector");
 
 // Register api
 const regUser = (req, res) => {
-  
   var username = req.body.username;
   var email = req.body.email;
   var password = req.body.password;
@@ -27,7 +26,7 @@ const regUser = (req, res) => {
     });
   });
 
-  return res.status(200).json({ success: true});
+  return res.status(200).json({ success: true });
 };
 
-module.exports = regUser;
+module.exports = { regUser };

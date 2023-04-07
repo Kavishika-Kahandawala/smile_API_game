@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
-const regUser = require ('./routes/users')
+const userRoute = require ('./routes/users-route')
 
 
 app.use (express.static('./public'))
 app.use (express.urlencoded({extended: false}))
 app.use (express.json())
 
-app.use("/register", regUser);
+// app.use("/users", userRoute);
 
 
 
