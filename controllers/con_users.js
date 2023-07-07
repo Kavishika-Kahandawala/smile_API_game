@@ -1,32 +1,103 @@
-const con = require("../db/db-connector");
+const { createToken, maxAge } = require ('../cookie_man/create-jwt')
+const bcrypt = require("bcrypt");
+const mysql = require("mysql");
+const db = require ('../db/dbServer')
 
-// Register api
-const regUser = (req, res) => {
-  var username = req.body.username;
-  var email = req.body.email;
-  var password = req.body.password;
-  var region = req.body.region;
-  con.connect(function (err) {
+
+//Register a User
+const regUser = async (req, res) => {
+  const user = req.body.username;
+  const email = req.body.email;
+  const hashedPassword = await bcrypt.hash(req.body.password, 10);
+  const region = req.body.region;
+
+  db.getConnection(async (err, connection) => {
     if (err) throw err;
-    console.log("Connection has been established with database");
-    var sql =
+    const sqlSearch = "SELECT * FROM users WHERE username = ?";
+    const search_query = mysql.format(sqlSearch, [user]);
+    const sqlInsert =
       "INSERT INTO users ( username, email, password, region) VALUES ( '" +
-      username +
+      user +
       "','" +
       email +
       "','" +
-      password +
+      hashedPassword +
       "','" +
       region +
       "');";
-    // "INSERT INTO users ( username, email, password, region) VALUES ( "+username+","+ email+","+ password+","+region+");";
-    con.query(sql, function (err, result) {
+    const insert_query = mysql.format(sqlInsert, [user, hashedPassword]);
+    await connection.query(search_query, async (err, result) => {
       if (err) throw err;
-      console.log("User has been registered to the server");
-    });
-  });
+      console.log("------> Search Results");
+      console.log(result.length);
 
-  return res.status(200).json({ success: true });
+      if (result.length != 0) {
+        connection.release();
+        console.log("------> User already exists");
+        res.sendStatus(409);
+      } else {
+        await connection.query(insert_query, (err, result) => {
+          connection.release();
+
+          if (err) throw err;
+          console.log("--------> Created new User");
+          console.log(result.insertId);
+          const token = createToken(user);
+          res.cookie("smile_token", token, {
+            httpOnly: true,
+            maxAge: maxAge * 1000,
+            sameSite: "strict",
+          });
+          res.status(201).json({ user });
+
+          // res.sendStatus(201);
+        });
+      }
+    }); //end of connection.query()
+  }); //end of db.getConnection()
 };
 
-module.exports = { regUser };
+
+//login user
+const loginUser = async (req, res) => {
+    const logUser = req.body.username;
+    const logPassword = req.body.password;
+
+    db.getConnection(async (err, connection) => {
+      if (err) throw err;
+      const sqlSearch = "Select * from users where username = ?";
+      const search_query = mysql.format(sqlSearch, [logUser]);
+
+      await connection.query(search_query, async (err, result) => {
+        connection.release();
+
+        if (err) throw err;
+
+        if (result.length == 0) {
+          console.log("--------> User does not exist");
+          res.sendStatus(404);
+        } else {
+          const hashedPassword = result[0].password;
+          console.log(hashedPassword);
+          console.log(logPassword);
+          //get the hashedPassword from result
+
+          var verify = await bcrypt.compare(logPassword, hashedPassword);
+          if (verify) {
+            console.log("---------> Login Successful");
+            res.send(`${logUser} is logged in!`);
+          } else {
+            console.log("---------> Password Incorrect");
+            res.send("Password incorrect!");
+          } //end of bcrypt.compare()
+        } //end of User exists i.e. results.length==0
+      }); //end of connection.query()
+    }); //end of db.connection()
+  }; //end of app.post()
+
+
+
+
+
+
+module.exports = { regUser, loginUser };

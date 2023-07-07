@@ -151,7 +151,6 @@
 
 
   <!-- Scripts -->
-  <script src="assets/js/console.js" type="module"></script>
 
 
   <script src="assets/js/jquery.min.js"></script>
@@ -161,21 +160,17 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
-    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
-    crossorigin="anonymous"></script>
-
   <script>
     const form = document.querySelector('form');
-    const emailError = document.querySelector('.email.error');
-    const passwordError = document.querySelector('.password.error');
+    // const emailError = document.querySelector('.email.error');
+    // const passwordError = document.querySelector('.password.error');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       // reset errors
-      emailError.textContent = '';
-      passwordError.textContent = '';
+      // emailError.textContent = '';
+      // passwordError.textContent = '';
 
       // get values
       const email = form.email.value;
@@ -192,8 +187,8 @@
         const data = await res.json();
         console.log(data);
         if (data.errors) {
-          emailError.textContent = data.errors.email;
-          passwordError.textContent = data.errors.password;
+          // emailError.textContent = data.errors.email;
+          // passwordError.textContent = data.errors.password;
         }
         if (data.user) {
           location.assign('/');

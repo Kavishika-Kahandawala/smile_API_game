@@ -136,7 +136,7 @@
 
 .li_ans .answer_a {
   background-color: #fff;
-  color: #20826c;
+  color: #285f73;
   display: block;
   height: 80px;
   position: relative;
@@ -157,7 +157,7 @@
 }
 
 .li_ans .answer_a .inner {
-  background-color: #20826c;
+  background-color: #285f73;
   display: block;
   height: 0;
   left: 50%;
@@ -227,7 +227,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: #ff003b;
+  background: #63cce1;
   transition: all .35s;
 }
 
@@ -269,7 +269,7 @@
 }
 
 .health_lost {
-  background-color: #636363;
+  background-color: #c2a7f8;
 }
 
 tr {
@@ -289,4 +289,7 @@ img {
 a,.btn,
 button,body {
   cursor: url("../game files/cursor/cursor.png") 15 15, pointer;
+}
+.space{
+  padding-bottom: 50px;
 }

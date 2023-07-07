@@ -1,0 +1,4 @@
+
+const jwt_secret='ec4624ff8109c95976f8a1fa61fd638cb9c5c7d94c2e62d4070d134b3cfbab3d8cbb92c43a6481246d92efdea2e3922f8796a72ff80df0495467dea4862597c5'
+
+module.exports=jwt_secret;
