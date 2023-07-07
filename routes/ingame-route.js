@@ -24,6 +24,7 @@ router.route("/getCharacterDet/:charID").get(getCharDetails);
 router.route("/SelectCharacters/:charID").get(insCharacterSession);
 router.route("/selectMode/:mode").get(modeSelect);
 router.route("/getLeaderboard/:region").get(getLDdata);
+router.route("/accharAbilityAct/:id").get(getLDdata);
 
 //validate
 
