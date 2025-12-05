@@ -1,3 +1,4 @@
+[![Update Dependencies](https://github.com/Kavishika-Kahandawala/smile_API_game/actions/workflows/npm_update.yml/badge.svg)](https://github.com/Kavishika-Kahandawala/smile_API_game/actions/workflows/npm_update.yml)
 # smile_API_game
 
 Made as a assessment for a University Final year project. The Main API used as the given assessment said with using interoperability is https://marcconrad.com/uob/smile/api.php?out=json
